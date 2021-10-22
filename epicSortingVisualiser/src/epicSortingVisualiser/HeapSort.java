@@ -1,5 +1,7 @@
 package epicSortingVisualiser;
 
+import java.util.Arrays;
+
 public class HeapSort {
 	
 	public static int iParent(int i) {
@@ -44,7 +46,9 @@ public class HeapSort {
 				swap = child + 1;
 			}
 			
-			if (swap != root) {
+			if (swap == root) {
+				return;
+			} else {
 				swap(A, root, swap);
 				root = swap;
 			}
