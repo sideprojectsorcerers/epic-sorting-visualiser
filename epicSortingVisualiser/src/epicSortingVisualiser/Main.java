@@ -1,9 +1,24 @@
 package epicSortingVisualiser;
 import java.util.Scanner;
 import javax.swing.*;
+
 public class Main {
 
 	public static void main(String[] args) {
+		//GUI init
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		frame.setSize(300, 300);
+		JLabel label1 = new JLabel("Pick desired algorithm");
+		JRadioButton bubble = new JRadioButton();
+		JRadioButton insertion = new JRadioButton();
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(bubble);
+		bg.add(insertion);
+		frame.add(label1);
+		frame.add(bubble);
+		frame.add(insertion);
+		
 		//Basic initialisation
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter desired array length:");
@@ -15,9 +30,6 @@ public class Main {
 		}
 		scan.close();
 		
-		//GUI Test
-		JFrame frame = new JFrame();
-		frame.setVisible(true);
 		//calling sorting algorithms
 		BubbleSort.bubbleSort(array);
 		printArray(array);
