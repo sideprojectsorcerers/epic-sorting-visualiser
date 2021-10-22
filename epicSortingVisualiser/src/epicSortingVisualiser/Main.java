@@ -1,24 +1,12 @@
 package epicSortingVisualiser;
 import java.util.Random;
 
-import javax.swing.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		//GUI init
-		JFrame frame = new JFrame();
-		frame.setVisible(true);
-		frame.setSize(300, 300);
-		JLabel label1 = new JLabel("Pick desired algorithm");
-		JRadioButton bubble = new JRadioButton();
-		JRadioButton insertion = new JRadioButton();
-		ButtonGroup bg = new ButtonGroup();
-		bg.add(bubble);
-		bg.add(insertion);
-		frame.add(label1);
-		frame.add(bubble);
-		frame.add(insertion);
+		GUI.draw();
 		
 		//Init of array: 255 elements from 0 to 255 which are then shuffled
 		int array[] = new int[256];
@@ -28,7 +16,11 @@ public class Main {
 		shuffleArray(array);
 		
 		//calling sorting algorithms
-		BubbleSort.bubbleSort(array);
+		//BubbleSort.bubbleSort(array);
+		printArray(array);
+		System.out.println("----------------------------------");
+		//MergeSort.mergeSort(array, array.length);
+		HeapSort.heapSort(array);
 		printArray(array);
 	}
 	
