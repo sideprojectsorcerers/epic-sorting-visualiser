@@ -1,5 +1,6 @@
 package epicSortingVisualiser;
 import java.util.Scanner;
+import javax.swing.*;
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,6 +15,9 @@ public class Main {
 		}
 		scan.close();
 		
+		//GUI Test
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
 		//calling sorting algorithms
 		BubbleSort.bubbleSort(array);
 		printArray(array);
