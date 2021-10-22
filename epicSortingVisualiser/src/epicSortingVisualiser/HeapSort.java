@@ -1,6 +1,5 @@
 package epicSortingVisualiser;
 
-import java.util.Arrays;
 
 public class HeapSort {
 	
