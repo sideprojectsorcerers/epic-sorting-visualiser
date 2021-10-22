@@ -1,7 +1,5 @@
 package epicSortingVisualiser;
 
-import java.util.Arrays;
-
 public class HeapSort {
 	
 	public static int iParent(int i) {
@@ -65,6 +63,5 @@ public class HeapSort {
 		}
 		
 		return A;
-		
 	}
 }
