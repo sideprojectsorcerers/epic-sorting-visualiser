@@ -53,7 +53,7 @@ public class HeapSort {
 		}
 	}
 	
-	public static void heapSort(int[] A) {
+	public static int[] heapSort(int[] A) {
 		int n = A.length;
 		heapify(A, n);
 		int end = n - 1;
@@ -64,7 +64,7 @@ public class HeapSort {
 			siftDown(A, 0, end);
 		}
 		
-		//return a;
+		return A;
 		
 	}
 }
