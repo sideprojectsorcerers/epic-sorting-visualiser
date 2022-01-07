@@ -1,6 +1,6 @@
 package epicSortingVisualiser;
 
-public class BubbleSort {
+public class OldBubbleSort {
 	public static int[] bubbleSort(int[] a) {
 		//bog standard bubble sort
 		int n = a.length;

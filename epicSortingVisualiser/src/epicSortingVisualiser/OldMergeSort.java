@@ -1,6 +1,6 @@
 package epicSortingVisualiser;
 
-public class MergeSort {
+public class OldMergeSort {
 	public static void mergeSort(int[] a, int n) {
 		if (n <= 1) {
 			return;

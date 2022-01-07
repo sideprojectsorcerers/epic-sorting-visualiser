@@ -1,7 +1,7 @@
 package epicSortingVisualiser;
 
 
-public class HeapSort {
+public class OldHeapSort {
 	
 	public static int iParent(int i) {
 		return (int) Math.floor((i - 1) / 2.0);

@@ -1,6 +1,6 @@
 package epicSortingVisualiser;
 import java.util.Random;
-
+import sortingAlgos.*;
 
 public class Main {
 
@@ -15,20 +15,26 @@ public class Main {
 		}
 		shuffleArray(array);
 		
-		//calling sorting algorithms
-		//BubbleSort.bubbleSort(array);
+		//call sorting algorithms
 		printArray(array);
-		System.out.println("----------------------------------");
-		//MergeSort.mergeSort(array, array.length);
-		HeapSort.heapSort(array);
+		
+		//array = BubbleSort.bubbleSortDriver(array);
+		//array = SelectionSort.selectionSortDriver(array);
+		//array = InsertionSort.insertionSortDriver(array);
+		//array = HeapSort.heapSortDriver(array);
+		//array = MergeSort.mergeSortDriver(array);
+		array = QuickSort.quickSortDriver(array);
+		
 		printArray(array);
 	}
 	
 	public static void printArray(int[] a) {
 		//prints an array
-		for (int i=0; i<a.length; i++) {
-			System.out.println(a[i]);
+		System.out.print("[");
+		for (int i=0; i<a.length-1; i++) {
+			System.out.print(a[i] + ", ");
 		}
+		System.out.println(a[a.length-1] + "]");
 	}
 	
 	public static void shuffleArray(int[] a) {
