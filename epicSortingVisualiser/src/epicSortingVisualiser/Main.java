@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		//GUI init
 		//GUI.draw();
-		
+
 		//Timing
 		timing();
 	}
@@ -25,10 +25,13 @@ public class Main {
 		
 		for (int i=0; i<runs; i++) {
 			//Init of array, shuffle
+			int array[] = Utils.getRandomArray(10000);
+			/*
 			int array[] = new int[10000];
 			for (int j=array.length-1; j>=0; j--) {
 				array[j] = j;
 			}
+			*/
 			Utils.shuffleArray(array);
 			
 			//bubbleSort

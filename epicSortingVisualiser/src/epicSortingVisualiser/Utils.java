@@ -21,4 +21,13 @@ public class Utils {
 		      a[i] = temp;
 		}
 	}
+	
+	public static int[] getRandomArray(int length) {
+		int[] array = new int[length];
+		Random rand = new Random();
+		for (int i=0; i<length; i++) {
+			array[i] = rand.nextInt();
+		}
+		return array;
+	}
 }
