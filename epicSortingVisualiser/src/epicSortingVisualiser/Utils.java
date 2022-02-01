@@ -30,4 +30,32 @@ public class Utils {
 		}
 		return array;
 	}
+	
+	public static int[] getReverseArray(int length) {
+		int array[] = new int[length];
+		for (int i=0; i<length; i++) {
+			array[i] = length-i-1;
+		}
+		return array;
+	}
+	
+	public static int[] getNearlySortedArray(int length) {
+		int array[] = new int[length];
+		for(int i=0; i<length; i++) {
+			array[i] = i;
+		}
+		smallShuffle(array);
+		return array;
+	}
+	
+	public static void smallShuffle(int[] a) {
+		Random rand = new Random();
+		for (int i=0; i<a.length/100; i++) {
+		      int r1 = rand.nextInt(a.length);
+		      int r2 = rand.nextInt(a.length);
+		      int temp = a[r1];
+		      a[r1] = a[r2];
+		      a[r2] = temp;
+		}
+	}
 }

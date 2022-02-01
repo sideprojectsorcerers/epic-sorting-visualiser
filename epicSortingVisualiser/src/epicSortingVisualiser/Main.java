@@ -4,16 +4,22 @@ import java.util.Arrays;
 import sortingAlgos.*;
 
 public class Main {
-
+	
+	public static enum states {
+		STD,
+		REV,
+		NES
+	}
+	
 	public static void main(String[] args) {
 		//GUI init
 		//GUI.draw();
 
 		//Timing
-		timing();
+		timing(states.STD, 10000);
 	}
 	
-	public static void timing() {
+	public static void timing(states state, int arrLength) {
 		int runs = 100;
 		long bubbleTime = 0;
 		long selectionTime = 0;
@@ -25,14 +31,26 @@ public class Main {
 		
 		for (int i=0; i<runs; i++) {
 			//Init of array, shuffle
-			int array[] = Utils.getRandomArray(10000);
+			int array[];
+			if (state == states.STD) {
+				array = Utils.getRandomArray(arrLength);
+			}
+			else if (state == states.REV) {
+				array = Utils.getReverseArray(arrLength);
+			}
+			else if (state == states.NES) {
+				array = Utils.getNearlySortedArray(arrLength);
+			}
+			else {
+				throw new IllegalArgumentException();
+			}
 			/*
 			int array[] = new int[10000];
 			for (int j=array.length-1; j>=0; j--) {
 				array[j] = j;
 			}
 			*/
-			Utils.shuffleArray(array);
+			//Utils.shuffleArray(array);
 			
 			//bubbleSort
 			long bST = System.currentTimeMillis();
